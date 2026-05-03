@@ -3,16 +3,16 @@ import pandas as pd
 url = 'https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv'
 df = pd.read_csv(url)
 
-#print(df.info())
-#print(df.describe())
-#print(df['Sex'].value_counts())
-#print(df['Pclass'].value_counts())
+print(df.info())
+print(df.describe())
+print(df['Sex'].value_counts())
+print(df['Pclass'].value_counts())
 
 # Una sola columna
-#print(df["Age"])
+print(df["Age"])
 
 # Varias columnas a la vez
-#print(df[['Name', 'Sex', 'Survived']])
+print(df[['Name', 'Sex', 'Survived']])
 
 # Sólo los pasajeros que sobrevivieron
 supervivientes = df[df['Survived'] == 1]

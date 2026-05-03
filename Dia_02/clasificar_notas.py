@@ -16,5 +16,3 @@ clasificaciones = [clasificar_nota(n) for n in notas]
 
 for i, calificacion in enumerate(clasificaciones):
     print(f'Alumno {i+1}: {calificacion}')
-#clasificaciones = [clasificar_nota(n) for n in notas]
-#print(clasificaciones)

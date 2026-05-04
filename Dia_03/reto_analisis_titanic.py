@@ -6,7 +6,7 @@ df = pd.read_csv(url)
 # ¿Cuántos pasajeros había en total?
 print(df.info())
 
-pasajeros_totales = df['PassengerId']
+pasajeros_totales = df['PassengerId'].shape[0]
 print(pasajeros_totales.shape)
 
 # ¿Cuántos sobrevivieron y cuántos murieron?
@@ -29,7 +29,6 @@ print(viajeros_por_clase)
 niños_menores_16 = (df['Age'] < 16).sum()
 supervivientes_menores_de_16 = ((df['Age'] < 16) & (df['Survived'] == 1)).sum()
 print(df['Survived'].value_counts())
-print(supervivientes_menores_de_16.shape)
 porcentaje = (supervivientes_menores_de_16 / niños_menores_16) * 100
 print(f'Tasa de supervivencia en niños: {porcentaje:.2f}%')
 
